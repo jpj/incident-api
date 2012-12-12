@@ -4,7 +4,7 @@
 	<groupId>com.solairis.incident</groupId>
 	<artifactId>incident-api</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0.1-SNAPSHOT</version>
+	<version>1.0-SNAPSHOT</version>
 	<name>Incident API</name>
 	<url>http://maven.apache.org</url>
 
@@ -25,11 +25,23 @@
 		<connection>scm:git:https://github.com/jpj/incident-api.git</connection>
 		<developerConnection>scm:git:https://github.com/jpj/incident-api.git</developerConnection>
 		<!--<url>https://github.com/jpj/incident-api/tree/master</url>-->
-<!--		<connection>scm:git:file://.</connection>
+		<!--		<connection>scm:git:file://.</connection>
 		<developerConnection>scm:git:file://.</developerConnection>
 		<url>scm:git:file://.</url>-->
 
 	</scm>
+
+	<distributionManagement>
+		<repository>
+			<id>solairis-local-releases</id>
+			<url>http://solairis.com:8182/nexus/content/repositories/releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>solairis-local-snapshots</id>
+			<name>Solairis Snapshots</name>
+			<url>http://solairis.com:8182/nexus/content/repositories/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
 
 	<dependencies>
 		<dependency>
@@ -76,7 +88,7 @@
 					<target>1.6</target>
 				</configuration>
 			</plugin>
-<!--			<plugin>
+			<!--			<plugin>
 				<artifactId>maven-scm-plugin</artifactId>
 				<groupId>org.apache.maven.plugins</groupId>
 				<configuration>
