@@ -16,6 +16,14 @@ public class Incident {
 	private Date startDate;
 	private String label;
 
+	public Incident() {
+	}
+
+	public Incident(Date startDate, String label) {
+		this.startDate = startDate;
+		this.label = label;
+	}
+
 	public String getId() {
 		return id;
 	}

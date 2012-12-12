@@ -5,13 +5,14 @@
 package com.solairis.incident.repository;
 
 import com.solairis.incident.entity.Incident;
-import java.io.Serializable;
-import org.springframework.data.repository.PagingAndSortingRepository;
+import java.util.List;
 
 /**
  *
  * @author josh
  */
-public interface IncidentRepository extends PagingAndSortingRepository<Incident, Serializable> {
+public interface IncidentRepository extends BaseRepository<Incident, String> {
+
+	List<Incident> findByLabelLikeOrderByLabelAsc(String label);
 
 }

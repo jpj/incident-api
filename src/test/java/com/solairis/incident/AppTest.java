@@ -1,38 +1,37 @@
 package com.solairis.incident;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import com.solairis.incident.entity.Incident;
+import com.solairis.incident.repository.IncidentRepository;
+import java.util.Date;
+import java.util.List;
+import javax.annotation.Resource;
+import org.junit.Test;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.AbstractJUnit4SpringContextTests;
 
 /**
  * Unit test for simple App.
  */
-public class AppTest 
-    extends TestCase
-{
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
-    }
+@ContextConfiguration(locations={"classpath:spring-config.xml"})
+public class AppTest
+	extends AbstractJUnit4SpringContextTests {
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
+	@Resource
+	private IncidentRepository incidentRepository;
 
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
-    }
+	@Test
+	public void test() {
+
+		Incident incident = new Incident(new Date(), "Other Cow");
+		incidentRepository.save(incident);
+		System.out.println("GOT IT "+incident.getId());
+		List<Incident> findByLabelIgnoreCaseOrderByLabelDesc = incidentRepository.findByLabelLikeOrderByLabelAsc("Other");
+
+		System.out.println("RETURNED "+findByLabelIgnoreCaseOrderByLabelDesc.size());
+
+		for (Incident i1 : findByLabelIgnoreCaseOrderByLabelDesc) {
+			System.out.println("\tFOUND "+i1.getId()+" "+i1.getLabel());
+		}
+
+	}
 }
