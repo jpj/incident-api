@@ -22,8 +22,8 @@
 	</developers>
 
 	<scm>
-		<connection>scm:git:file://.</connection>
-		<developerConnection>scm:git:file://.</developerConnection>
+		<connection>scm:git:file://.scm:git:file://.</connection>
+		<developerConnection>scm:git:file://.scm:git:file://.</developerConnection>
 
 	</scm>
 
