@@ -22,13 +22,8 @@
 	</developers>
 
 	<scm>
-		<connection>scm:git:https://github.com/jpj/incident-api.git</connection>
-		<developerConnection>scm:git:https://github.com/jpj/incident-api.git</developerConnection>
-		<!--<url>https://github.com/jpj/incident-api/tree/master</url>-->
-		<!--		<connection>scm:git:file://.</connection>
-		<developerConnection>scm:git:file://.</developerConnection>
-		<url>scm:git:file://.</url>-->
-
+		<connection>scm:git:ssh://git@github.com:jpj/incident-api.git</connection>
+		<developerConnection>scm:git:ssh://git@github.com:jpj/incident-api.git</developerConnection>
 	</scm>
 
 	<distributionManagement>
