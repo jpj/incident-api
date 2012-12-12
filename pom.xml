@@ -4,7 +4,7 @@
 	<groupId>com.solairis.incident</groupId>
 	<artifactId>incident-api</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0.1-SNAPSHOT</version>
+	<version>1.0-SNAPSHOT</version>
 	<name>Incident API</name>
 	<url>http://maven.apache.org</url>
 
@@ -22,12 +22,12 @@
 	</developers>
 
 	<scm>
-<!--		<connection>scm:git:https://github.com/jpj/incident-api.git</connection>
+		<connection>scm:git:https://github.com/jpj/incident-api.git</connection>
 		<developerConnection>scm:git:https://github.com/jpj/incident-api.git</developerConnection>
-		<url>scm:git:https://github.com/jpj/incident-api.git</url>-->
-		<connection>scm:git:file://.</connection>
+		<url>https://github.com/jpj/incident-api/tree/master</url>
+<!--		<connection>scm:git:file://.</connection>
 		<developerConnection>scm:git:file://.</developerConnection>
-		<url>scm:git:file://.</url>
+		<url>scm:git:file://.</url>-->
 
 	</scm>
 
@@ -76,10 +76,9 @@
 					<target>1.6</target>
 				</configuration>
 			</plugin>
-			<plugin>
+<!--			<plugin>
 				<artifactId>maven-scm-plugin</artifactId>
 				<groupId>org.apache.maven.plugins</groupId>
-				<!--<version></version>-->
 				<configuration>
 					<tag />
 					<connectionType>connection</connectionType>
@@ -93,7 +92,7 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin>
+			</plugin>-->
 		</plugins>
 
 	</build>
