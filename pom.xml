@@ -22,9 +22,12 @@
 	</developers>
 
 	<scm>
-		<connection>scm:git:https://github.com/jpj/incident-api.git</connection>
+<!--		<connection>scm:git:https://github.com/jpj/incident-api.git</connection>
 		<developerConnection>scm:git:https://github.com/jpj/incident-api.git</developerConnection>
-		<url>scm:git:https://github.com/jpj/incident-api.git</url>
+		<url>scm:git:https://github.com/jpj/incident-api.git</url>-->
+		<connection>scm:git:file://.</connection>
+		<developerConnection>scm:git:file://.</developerConnection>
+		<url>scm:git:file://.</url>
 
 	</scm>
 
