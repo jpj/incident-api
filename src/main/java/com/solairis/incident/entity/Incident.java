@@ -15,13 +15,15 @@ public class Incident {
 	private String id;
 	private Date startDate;
 	private String label;
+	private String userId;
 
 	public Incident() {
 	}
 
-	public Incident(Date startDate, String label) {
+	public Incident(Date startDate, String label, String userId) {
 		this.startDate = startDate;
 		this.label = label;
+		this.userId = userId;
 	}
 
 	public String getId() {
@@ -46,6 +48,14 @@ public class Incident {
 
 	public void setStartDate(Date startDate) {
 		this.startDate = startDate;
+	}
+
+	public String getUserId() {
+		return userId;
+	}
+
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
 
 }

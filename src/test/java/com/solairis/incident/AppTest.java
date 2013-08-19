@@ -21,17 +21,6 @@ public class AppTest
 
 	@Test
 	public void test() {
-
-		Incident incident = new Incident(new Date(), "Other Cow");
-		incidentRepository.save(incident);
-		System.out.println("GOT IT "+incident.getId());
-		List<Incident> findByLabelIgnoreCaseOrderByLabelDesc = incidentRepository.findByLabelLikeOrderByLabelAsc("Other");
-
-		System.out.println("RETURNED "+findByLabelIgnoreCaseOrderByLabelDesc.size());
-
-		for (Incident i1 : findByLabelIgnoreCaseOrderByLabelDesc) {
-			System.out.println("\tFOUND "+i1.getId()+" "+i1.getLabel());
-		}
-
+		// Nothing to test yet
 	}
 }
